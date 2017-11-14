@@ -5,17 +5,6 @@ import sys
 
 sys.setrecursionlimit(5000)
 
-
-values = {'A': [4, 12, 5], 'B': [7, 10, 9], 'C': [7, 7, 10]}
-utilities = {'A': [4, 12, 5], 'B': [7, 10, 9], 'C': [7, 7, 10]}
-
-peopleSet = {'A', 'B', 'C'}
-# house : price
-housesSet = {1 : 0, 2: 0, 3: 0}
-prices = [0, 3, 2]
-
-seedData = {'X': {'A', 'B', 'C'}, 'Y': {1, 2, 3}, 'values': values, 'utilities': utilities, 'prices': prices}
-
 class Flow:
     def __init__(self, graphSeedData, prices, directed=False):
         self.graph = {}
@@ -82,25 +71,6 @@ class Flow:
 
 
     def match(self, maxUtils):
-        # matches = {}
-        # maxUtils = {}
-        # for person in self.X:
-        #     # {key: None, val: 0}
-        #     newUtils = []
-        #     for i in range(len(self.values[person])):
-        #         # print('MAX UTILS', maxUtils)
-        #         utility = self.values[person][i] - self.prices[i]
-        #         newUtils.append(utility)
-        #         if person not in maxUtils:
-        #             maxUtils[person] = []
-        #         if len(maxUtils[person]) == 0:
-        #             maxUtils[person].append({'key': i + 1, 'val': utility})
-        #         elif utility > maxUtils[person][0]['val']:
-        #             maxUtils[person] = [{'key': i + 1, 'val': utility}]
-        #         elif utility == maxUtils[person][0]['val']:
-        #             maxUtils[person].append({'key': i + 1, 'val': utility})
-        #     self.utilities[person] = newUtils
-        # self.maxUtils = maxUtils
         for x in maxUtils.keys():
             for i in range(len(maxUtils[x])):
                 # print(maxUtils[x][i])
@@ -173,11 +143,3 @@ class Flow:
         self.match(savedMaxUtils)
         savedMaxFlow = self.maxFlow('s', 't')
         return self.returnConstrictedSet(savedMaxFlow, savedMaxUtils)
-
-# testGraph = Flow(seedData, True)
-# constSet = testGraph.findConstrictedSet()
-# while len(constSet) > 0:
-#     for y in constSet:
-#         currentPrice = prices[y]
-#         newPrice = currentPrice + 1
-#         prices[y] = newPrice
