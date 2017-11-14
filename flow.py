@@ -120,7 +120,7 @@ class Flow:
             if person not in matchedPeople:
                 for util in maxUtils[person]:
                     constrictedSet.add(util['key'])
-        print('CONSTRICTED', constrictedSet)
+        # print('CONSTRICTED', constrictedSet)
         return constrictedSet
 
     def raisePrices(self, constrictedSet, prices):
@@ -133,9 +133,9 @@ class Flow:
         perfectMatchings = {}
         for path in self.paths:
             for edge in path:
-                if edge[0].source in ['A', 'B', 'C']:
+                if edge[0].source in ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'J', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']:
                     perfectMatchings[edge[0].source] = edge[0].sink
-        print(perfectMatchings)
+        # print(perfectMatchings)
         return perfectMatchings
 
     def findConstrictedSet(self):
