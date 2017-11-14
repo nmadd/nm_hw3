@@ -1,0 +1,14 @@
+##### Find whether or not there is a perfect matching:
+# Given an undirected bipartite graph G = (X ∪ Y, E), create an ex- panded weighted directed graph G′ with two extra nodes s and t, edges with capacity 1 from s to every node in X, and edges with capacity 1 from every node in Y to t.
+# Set all existing edges from X to Y to have infinite capacity1. Then find the maximum flow in this graph G′ using the augmenting path algorithm; output the edges between X and Y which have flow on them.
+# if the number of edges does not equal n (aka the number of items), then there is a constricted set
+# the constricted set consists of everyone who chose the same item
+
+##### Raise the prices of all items by 1
+# for each item that is part of a constricted set (aka for each item that has more than one person who prefers it) raise the price by 1
+
+##### If the price of all items is now greater than zero, shift all prices downwards by 1 to ensure that the cheapest item has a price of zero.
+
+##### Continue until a perfect mathing is found
+
+# Sources: figure 8.3, theorem 8.8, theorem 6.6 (old notes)
