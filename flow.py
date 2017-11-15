@@ -74,7 +74,7 @@ class Flow:
         for x in maxUtils.keys():
             for i in range(len(maxUtils[x])):
                 # print(maxUtils[x][i])
-                self.addEdge(x, maxUtils[x][i]['key'], 1000)
+                self.addEdge(x, maxUtils[x][i]['key'], 100000000000)
 
 
 
@@ -135,7 +135,6 @@ class Flow:
             for edge in path:
                 if edge[0].source in ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'J', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']:
                     perfectMatchings[edge[0].source] = edge[0].sink
-        # print(perfectMatchings)
         return perfectMatchings
 
     def findConstrictedSet(self):

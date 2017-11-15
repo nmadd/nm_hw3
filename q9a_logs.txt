@@ -1,0 +1,5 @@
+Expected Constricted Set: 2, Actual: set([2])
+Expected Constricted Set: 2,3 Actual: set([2, 3])
+Expected Constricted Set: 2,3 Actual: set([2, 3])
+Expected Constricted Set: None Actual: set([1, 2, 3])
+Expected Matching: A:2 B:1 C:3 Actual: {}
