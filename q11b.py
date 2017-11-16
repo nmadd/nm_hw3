@@ -1,5 +1,5 @@
 from q11a import constructGraph, constructPrices
-from vcg import VCG
+from vcg_bundles import VCG
 file = open('q11b_logs.txt', 'w')
 
 

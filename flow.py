@@ -121,6 +121,7 @@ class Flow:
                 for util in maxUtils[person]:
                     constrictedSet.add(util['key'])
         # print('CONSTRICTED', constrictedSet)
+        file = open('q9a_logs.txt', 'w')
         return constrictedSet
 
     def raisePrices(self, constrictedSet, prices):

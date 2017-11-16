@@ -21,7 +21,7 @@ def getMarketEquilibrium(seedData, prices):
             prices[y - 1] = newPrice
         if min(prices) > 0:
             downShiftedPrices = [p - 1 for p in prices]
-            print('SHIFTING', prices, downShiftedPrices)
+            # print('SHIFTING', prices, downShiftedPrices)
             prices = downShiftedPrices
         testGraph = Flow(seedData, prices, True)
         constSet = testGraph.findConstrictedSet()

@@ -17,7 +17,7 @@ def constructGraph(size):
         values[letter] = []
         # assign random values per good
         for i in range (0, size):
-            values[letter].append(randint(0, 50))
+            values[letter].append(randint(0, 50) * i) 
     utilities = deepcopy(values)
     graph = {'X': X, 'Y': Y, 'values': values, 'utilities': utilities}
     return graph

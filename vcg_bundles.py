@@ -25,4 +25,4 @@ def VCG(seedData, prices):
         vcgPrices[matches[person]] = notPresent - present
         present = 0
         notPresent = 0
-    return vcgPrices
+    return {'matches': matches, 'prices': vcgPrices}
